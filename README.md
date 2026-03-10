@@ -1,3 +1,25 @@
+## Badass Women In Wine Site (Fork)
+
+This repository is a forked and customized version of the **Dante Astro theme** by Just Good UI, used to build the **Badass Women In Wine** website.
+
+### Base URL Configuration
+
+Base URL behavior is configured in:
+
+`src/config/site.js`
+
+Use `RAW_BASE_PATH` to control where the site is served:
+
+- `"/"`: site served from domain root (example: `https://example.com/`)
+- `"/BAWIW/"`: site served from a subpath (example: `https://example.com/BAWIW/`)
+- `"BAWIW/"`: also supported; it is normalized to `/BAWIW` internally
+
+The helper functions in this file normalize slashes and safely join paths, so links and asset URLs stay valid when switching between root and subpath hosting.
+
+See specific Dante build/preview/dev functionality below.
+
+---
+
 # Dante - Astro & Tailwind CSS Theme by justgoodui.com
 
 Dante is a single-author blog and portfolio theme for Astro.js. Featuring a minimal, slick, responsive and content-focused design. For more Astro.js themes please check [justgoodui.com](https://justgoodui.com/).

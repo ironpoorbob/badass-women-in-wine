@@ -29,7 +29,7 @@ const { title, image, text, actions, instagramPosts, instagramTitle } = Astro.pr
                             fetchpriority="high"
                             loading="eager"
                         />
-                        {image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{image.caption}</figcaption>}
+                        {image.caption && <figcaption class="mt-1.5 text-[10px] text-main/60 sm:text-xs">{image.caption}</figcaption>}
                     </figure>
                 )}
                 {text && <div class="prose sm:prose-lg max-w-none" set:html={marked.parse(text)} />}
