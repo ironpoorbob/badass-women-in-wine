@@ -8,7 +8,12 @@ seo:
     alt: The Badass Women In Wine
 ---
 
-![Badass Women In Wine](../../assets/images/about.jpg)
+import { withBasePath } from '../../config/site.js';
+
+<figure className="my-6">
+  <img src={withBasePath('about.jpg', import.meta.env.BASE_URL)} alt="Badass Women In Wine" />
+  <figcaption className="mt-1 text-[10px] text-main/60 sm:text-xs">Photo by Janeth R Sanchez</figcaption>
+</figure>
 
 Badass Women in Wine is a community of women in wine empowering women in wine. Rooted in leadership, integrity, generosity, and professionalism, we create meaningful opportunities to connect, support one another, and grow together. Through shared experiences, events, and conversation, we elevate each other and celebrate the women helping shape the future of the wine industry.
 

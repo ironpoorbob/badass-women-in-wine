@@ -23,9 +23,15 @@ const navLinks = siteConfig.headerNavLinks ?? [];
                     class="menu max-md:bg-main max-md:border-main flex gap-6 max-md:absolute max-md:-top-2.5 max-md:-left-2.5 max-md:z-20 max-md:max-w-64 max-md:flex-col max-md:gap-1 max-md:border max-md:border-dashed max-md:px-3 max-md:pt-16 max-md:pb-10"
                 >
                     {navLinks.map((link) => (
-                        <li class="py-1">
+                        <li class:list={['py-1', { 'md:ml-auto': link.text === 'Donate' }]}>
                             <NavLink
-                                class="text-main font-serif text-xl hover:underline hover:decoration-1 hover:underline-offset-2 md:text-base"
+                                class:list={[
+                                    'text-main font-serif text-xl hover:underline hover:decoration-1 hover:underline-offset-2 md:text-base',
+                                    {
+                                        'md:rounded-[4px] md:bg-neutral-800 md:px-3 md:py-1 md:text-neutral-100 md:no-underline md:hover:bg-neutral-700 md:hover:no-underline md:dark:bg-neutral-200 md:dark:text-neutral-900 md:dark:hover:bg-neutral-300':
+                                            link.text === 'Donate'
+                                    }
+                                ]}
                                 href={link.href}
                             >
                                 {link.text}
