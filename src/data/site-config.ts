@@ -28,10 +28,6 @@ const siteConfig: SiteConfig = {
     {
       text: 'Contact',
       href: withBasePath('contact')
-    },
-    {
-      text: 'Donate',
-      href: '#'
     }
   ],
   footerNavLinks: [
@@ -67,18 +63,6 @@ const siteConfig: SiteConfig = {
         text: 'Get in Touch',
         href: withBasePath('contact')
       }
-    ],
-    instagramTitle: 'Latest on Instagram',
-    instagramPosts: [
-      'https://www.instagram.com/p/DVb3ff-EmpP/',
-      'https://www.instagram.com/p/DVH31PllDvb/',
-      'https://www.instagram.com/p/DU4K76GEv1J/',
-      'https://www.instagram.com/p/DU4H1RAklZy/',
-      'https://www.instagram.com/p/DUTqUPgEuef/',
-      'https://www.instagram.com/p/DToAQ-OklVA/',
-      'https://www.instagram.com/p/DTn8i4pEkl5/',
-      'https://www.instagram.com/p/DPe6KqsAXTZ/',
-      'https://www.instagram.com/p/DNTfox_vhgH/'
     ]
   },
   postsPerPage: 8

@@ -4,17 +4,19 @@ This repository is a forked and customized version of the **Dante Astro theme** 
 
 ### Base URL Configuration
 
-Base URL behavior is configured in:
+Set the base path at build time when the site is hosted under a subdirectory:
 
-`src/config/site.js`
+```bash
+BASE_PATH=/BAWIW/ npm run build
+```
 
-Use `RAW_BASE_PATH` to control where the site is served:
+If `BASE_PATH` is omitted, the site is built for the domain root. Supported values include:
 
 - `"/"`: site served from domain root (example: `https://example.com/`)
 - `"/BAWIW/"`: site served from a subpath (example: `https://example.com/BAWIW/`)
 - `"BAWIW/"`: also supported; it is normalized to `/BAWIW` internally
 
-The helper functions in this file normalize slashes and safely join paths, so links and asset URLs stay valid when switching between root and subpath hosting.
+The helper functions in `src/config/site.js` normalize slashes and safely join paths, so links and asset URLs stay valid when switching between root and subpath hosting.
 
 See specific Dante build/preview/dev functionality below.
 
