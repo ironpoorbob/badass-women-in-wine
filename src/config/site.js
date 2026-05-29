@@ -1,4 +1,4 @@
-const RAW_BASE_PATH = '/';
+const RAW_BASE_PATH = process.env.BASE_PATH ?? '/';
 
 export const normalizeBasePath = (basePath = '/') => {
   if (!basePath || basePath === '/') return '/';
