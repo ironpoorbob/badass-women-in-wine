@@ -1,0 +1,44 @@
+---
+import { Image, type ImageMetadata } from 'astro:assets';
+import Button from './Button.astro';
+
+const imageModules = import.meta.glob<{ default: ImageMetadata }>('../assets/images/events/*.{jpg,jpeg,png,webp}', {
+    eager: true
+});
+
+const images = Object.entries(imageModules)
+    .sort(([pathA], [pathB]) => pathA.localeCompare(pathB))
+    .map(([path, module]) => {
+        const filename =
+            path
+                .split('/')
+                .pop()
+                ?.replace(/\.[^.]+$/, '') ?? 'BWW event';
+        const label = filename.replaceAll('_', ' ');
+        return { src: module.default, label };
+    });
+---
+
+<section class="not-prose mt-16 sm:mt-24" aria-labelledby="gallery-title">
+    <h2 id="gallery-title" class="font-serif text-3xl font-medium sm:text-4xl">Gallery</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+        {
+            images.map(({ src, label }) => (
+                <figure>
+                    <Image
+                        src={src}
+                        alt={`${label} gathering`}
+                        class="aspect-3/2 w-full object-cover"
+                        widths={[480, 768, 1200]}
+                        sizes="(min-width: 640px) 352px, calc(100vw - 32px)"
+                    />
+                    <figcaption class="text-main/60 mt-2 text-xs">{label}</figcaption>
+                </figure>
+            ))
+        }
+    </div>
+    <div class="border-main/25 mt-10 border-t pt-8">
+        <p class="text-sm leading-relaxed sm:text-base">See more gatherings and community moments on Instagram.</p>
+        <Button href="https://www.instagram.com/badasswomeninwine/" target="_blank" rel="noreferrer" class="mt-5"> Instagram · @badasswomeninwine </Button>
+    </div>
+</section>

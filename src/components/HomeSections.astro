@@ -1,0 +1,51 @@
+---
+import { marked } from 'marked';
+import type { HomePage } from '../types';
+import Button from './Button.astro';
+
+type Props = HomePage;
+
+const { mission, callsToAction, socialLinks } = Astro.props;
+---
+
+<section class="mb-16 sm:mb-24" aria-labelledby="mission-title">
+    <h2 id="mission-title" class="mb-6 font-serif text-2xl font-medium sm:text-4xl">{mission.title}</h2>
+    <div class="prose sm:prose-lg max-w-none" set:html={marked.parse(mission.text)} />
+    {
+        mission.quote && (
+            <blockquote class="border-main mt-10 border-y py-8 font-serif text-2xl leading-tight whitespace-pre-line italic sm:py-10 sm:text-4xl">
+                {mission.quote}
+            </blockquote>
+        )
+    }
+</section>
+
+<section class="mb-16 sm:mb-24" aria-label="Get involved">
+    <div class="grid gap-4 sm:grid-cols-2">
+        {
+            callsToAction.map((action) => (
+                <article class="border-main/35 bg-muted/30 flex flex-col items-start border p-6 sm:p-8">
+                    <h2 class="font-serif text-2xl font-medium sm:text-3xl">{action.title}</h2>
+                    <p class="mt-3 grow text-sm leading-relaxed sm:text-base">{action.text}</p>
+                    <Button href={action.href} target={action.target} rel={action.target === '_blank' ? 'noreferrer' : undefined} class="mt-6">
+                        {action.buttonLabel}
+                    </Button>
+                </article>
+            ))
+        }
+    </div>
+</section>
+
+<section class="mb-16 sm:mb-24" aria-labelledby="follow-title">
+    <h2 id="follow-title" class="font-serif text-2xl font-medium sm:text-4xl">Follow Us</h2>
+    <p class="mt-3 max-w-xl text-sm leading-relaxed sm:text-base">Keep up with the latest news, events, and women shaping the wine industry.</p>
+    <div class="mt-6 flex flex-wrap gap-4">
+        {
+            socialLinks.map((link) => (
+                <Button href={link.href} target="_blank" rel="noreferrer">
+                    {link.text}
+                </Button>
+            ))
+        }
+    </div>
+</section>
