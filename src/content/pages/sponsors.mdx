@@ -5,6 +5,8 @@ seo:
   description: Meet the organizations supporting Badass Women in Wine and learn how to become a sponsor.
 ---
 
+import { withBasePath } from '../../config/site.js';
+
 ## Supporting Women in Wine
 
 Our sponsors help us create opportunities for connection, continuing education, professional growth, and greater access across the wine industry.
@@ -43,6 +45,16 @@ Our sponsors help us create opportunities for connection, continuing education, 
       We’re proud to welcome Moke Barrels as a 2026 sponsor. Founded by wine industry expert Moke Berg, the West Coast barrel brokerage represents international
       cooperages including France’s Taransaud and Hungary’s Kádár, bringing deep expertise in oak, aging, and barrel craftsmanship to premium winemaking.
     </p>
+  </div>
+  <div className="flex py-8">
+    <img
+      src={withBasePath('sponsors/Ridge-Vineyards-Logo.jpg', import.meta.env.BASE_URL)}
+      alt="Ridge Vineyards"
+      width="600"
+      height="242"
+      className="h-auto w-full max-w-sm"
+      loading="lazy"
+    />
   </div>
 </div>
 

@@ -34,6 +34,7 @@ export type HomePage = {
     };
     callsToAction: CallToAction[];
     socialLinks: Link[];
+    organizationDetails?: string[];
 };
 
 export type SubscribeForm = {

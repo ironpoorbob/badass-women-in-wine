@@ -11,18 +11,32 @@ seo:
 import { withBasePath } from '../../config/site.js';
 import LeadershipProfiles from '../../components/LeadershipProfiles.astro';
 
+<nav className="not-prose mb-8 flex items-center gap-3 text-sm" aria-label="About page sections">
+  <a className="hover:underline hover:underline-offset-4" href="#history">
+    History
+  </a>
+  <span className="text-main/40" aria-hidden="true">
+    |
+  </span>
+  <a className="hover:underline hover:underline-offset-4" href="#people">
+    People
+  </a>
+</nav>
+
 <figure className="my-6">
-  <img src={withBasePath('about.jpg', import.meta.env.BASE_URL)} alt="Badass Women In Wine" />
+  <img src={withBasePath('about-founders-wide.jpg', import.meta.env.BASE_URL)} alt="Badass Women In Wine" />
   <figcaption className="text-main/60 mt-1 text-[10px] sm:text-xs">Photo by Janeth R Sanchez</figcaption>
 </figure>
 
-## History
+<h2 id="history" className="scroll-mt-8">
+  History
+</h2>
 
 It all started with a handful of gals who worked at wineries getting together for lunch.
 
 Sara Gorr turned that lunch into an annual tradition. Each year, we added more remarkable women we knew in the industry. With every new face, the table grew, and the conversation evolved to include sharing industry insights, the unique challenges we face, and peer mentorship.
 
-These women were not just invited because they were women. They were not just invited because they were fun. They were invited because they were cool, they supported other women, and they led by example—with integrity, generosity, and passion. We were building a community, selective yet inclusive.
+These women were not just invited because they were women. They were not just invited because they were fun. They were invited because they were cool, they supported other women, and they led by example with integrity, generosity, and passion. We were building a community, selective - yet inclusive.
 
 But there was another idea that had been percolating for Sara for years.
 
@@ -48,8 +62,8 @@ Badass Women in Wine expanded our mission and created the Heilmann Trophy Grant 
 
 What started as a lunch among a handful of gals has grown into something much bigger: a community committed to connection, leadership, and creating greater access to opportunity.
 
-Because when women have the resources, relationships, confidence, and room to grow, they don’t just advance their own careers—they bring new voices, ideas, and perspectives to the table. They challenge the status quo. They lead differently. And they have the power to make a bigger impact on the wine industry and help shape where it goes next.
+When women have the resources, relationships, confidence, and room to grow, they don’t just advance their own careers - they bring new voices, ideas, and perspectives to the table. They challenge the status quo. They lead differently. And they have the power to make a bigger impact on the wine industry and help shape where it goes next.
 
-That’s what Badass Women in Wine is really about: helping women find their voice, step into their power, and leave their mark on this industry we love.
+Badass Women in Wine is all about helping women find their most authentic voice, step into their power, and leave their mark on this industry we love.
 
 <LeadershipProfiles />

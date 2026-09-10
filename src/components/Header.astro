@@ -26,11 +26,11 @@ const homeHref = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
     <div class="grow">
         {
             siteConfig.avatar?.src ? (
-                <p class={titleClass}>{siteConfig.title}</p>
+                <h1 class={titleClass}>{siteConfig.title}</h1>
             ) : (
-                <a class={titleClass} href={homeHref}>
-                    {siteConfig.title}
-                </a>
+                <h1 class={titleClass}>
+                    <a href={homeHref}>{siteConfig.title}</a>
+                </h1>
             )
         }
         {siteConfig.subtitle && <p class="text-sm leading-tight">{siteConfig.subtitle}</p>}

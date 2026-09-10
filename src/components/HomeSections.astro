@@ -5,7 +5,7 @@ import Button from './Button.astro';
 
 type Props = HomePage;
 
-const { mission, callsToAction, socialLinks } = Astro.props;
+const { mission, callsToAction, socialLinks, organizationDetails } = Astro.props;
 ---
 
 <section class="mb-16 sm:mb-24" aria-labelledby="mission-title">
@@ -49,3 +49,13 @@ const { mission, callsToAction, socialLinks } = Astro.props;
         }
     </div>
 </section>
+
+{
+    organizationDetails && organizationDetails.length > 0 && (
+        <aside class="border-main/25 text-main/65 border-t pt-6 text-base leading-relaxed" aria-label="Organization details">
+            {organizationDetails.map((detail) => (
+                <p>{detail}</p>
+            ))}
+        </aside>
+    )
+}

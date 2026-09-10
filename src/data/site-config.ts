@@ -78,8 +78,7 @@ const siteConfig: SiteConfig = {
 Through gatherings, events, and shared experiences, we elevate one another—amplifying voices, building relationships, and opening doors. If you are here to lead with purpose, support others, and keep showing up with excellence (and a great glass of wine in hand), you’re in the right place.
 
 Our mission is to break barriers and shape a more inclusive and thriving industry.`,
-            quote: `We are not waiting for a seat at “the table.” We have built our own table.
-            Pull up your chair.`
+            quote: `We are not waiting for a seat at “the table.” We have built our own table. Pull up your chair.`
         },
         callsToAction: [
             {
@@ -105,7 +104,8 @@ Our mission is to break barriers and shape a more inclusive and thriving industr
                 text: 'LinkedIn',
                 href: 'https://www.linkedin.com/company/badass-women-in-wine/?viewAsMember=true'
             }
-        ]
+        ],
+        organizationDetails: ['Badass Women in Wine is a registered 501(c)(3) nonprofit organization. EIN #42-2542461']
     },
     postsPerPage: 8
 };
