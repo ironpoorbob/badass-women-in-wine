@@ -1,5 +1,5 @@
-import hero from '../assets/images/bwiw_hero_crop_v2_bw_topcropped.jpg';
-import avatar from '../assets/images/wine-glass.png';
+import avatar from '../assets/images/BWIW-red-logo.jpg';
+import hero from '../assets/images/bwiw_hero_ladies.jpg';
 import { withBasePath } from '../config/site.js';
 import type { SiteConfig } from '../types';
 
@@ -13,7 +13,7 @@ const siteConfig: SiteConfig = {
     subtitle: 'Women in wine empowering women in wine',
     description: 'A community of women in wine championing leadership, integrity, generosity, and professional growth.',
     image: {
-        src: withBasePath('bwiw_hero_crop_v2_bw_topcropped.jpg'),
+        src: withBasePath('../assets/images/BWIW-red-logo.jpg'),
         alt: 'Badass Women In Wine'
     },
     headerNavLinks: [
@@ -66,8 +66,8 @@ const siteConfig: SiteConfig = {
         title: 'Empowering Women in Wine',
         image: {
             src: hero,
-            alt: 'A person sitting at a desk in front of a computer',
-            caption: 'Photo by Janeth R Sanchez'
+            alt: 'Ladies drinking wine.',
+            caption: ''
         }
     },
     home: {
