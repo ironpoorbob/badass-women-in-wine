@@ -9,7 +9,7 @@ Thank you for reaching out! Whether you have a question about an upcoming event,
 
 _Email:_
 Send us a note at info@badasswomeninwine.org
- and we’ll reply soon.
+and we’ll reply soon.
 
 _Social Media:_
-Connect with us on social and join the conversation. Follow along on <a href="https://www.instagram.com/badasswomeninwine/" target="_blank" rel="noopener noreferrer">Instagram</a> (and feel free to DM us).
+Connect with us on social and join the conversation. Follow along on <a href="https://www.instagram.com/badasswomeninwine/" target="_blank" rel="noopener noreferrer">Instagram</a> (and feel free to DM us), or connect with us on <a href="https://www.linkedin.com/company/badass-women-in-wine/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
