@@ -5,7 +5,12 @@ seo:
   description: Meet the organizations supporting Badass Women in Wine and learn how to become a sponsor.
 ---
 
-import { withBasePath } from '../../config/site.js';
+import { Image } from 'astro:assets';
+import thirdPerson from '../../assets/images/sponsors/3rd_creative_wine02.png';
+import patzHall from '../../assets/images/sponsors/PATZ_&_HALL_WORDMARK_BLACK.svg';
+import ridgeVineyards from '../../assets/images/sponsors/Ridge-Vineyards-Logo.jpg';
+import treasuryAmericas from '../../assets/images/sponsors/TA_Logo_resized.png';
+import vinum55 from '../../assets/images/sponsors/Vinum55_Logo_resize.jpg';
 
 ## Supporting Women in Wine
 
@@ -17,54 +22,24 @@ Our sponsors help us create opportunities for connection, continuing education, 
 
 <div className="not-prose my-10 grid gap-4 sm:grid-cols-2">
   <div className="flex min-h-36 items-center justify-center bg-white p-6">
-    <img
-      src={withBasePath('sponsors/3rd_creative_wine02.png', import.meta.env.BASE_URL)}
-      alt="3rd Person Creative and 3rd Person WINE"
-      width="436"
-      height="134"
-      className="max-h-20 w-auto max-w-full object-contain"
-      loading="lazy"
-    />
+    <Image src={thirdPerson} alt="3rd Person Creative and 3rd Person WINE" class="max-h-20 w-auto max-w-full object-contain" loading="lazy" />
   </div>
   <div className="flex min-h-36 items-center justify-center bg-white p-6">
-    <img
-      src={withBasePath('sponsors/Ridge-Vineyards-Logo.jpg', import.meta.env.BASE_URL)}
-      alt="Ridge Vineyards"
-      width="600"
-      height="242"
-      className="max-h-16 w-auto max-w-full object-contain"
-      loading="lazy"
-    />
+    <Image src={ridgeVineyards} alt="Ridge Vineyards" class="max-h-16 w-auto max-w-full object-contain" loading="lazy" />
   </div>
   <div className="flex min-h-36 items-center justify-center bg-white p-6">
-    <img
-      src={withBasePath('sponsors/PATZ_&_HALL_WORDMARK_BLACK.svg', import.meta.env.BASE_URL)}
-      alt="Patz & Hall"
-      width="2016"
-      height="288"
-      className="max-h-16 w-auto max-w-full object-contain"
-      loading="lazy"
-    />
+    <Image src={patzHall} alt="Patz & Hall" class="max-h-16 w-auto max-w-full object-contain" loading="lazy" />
   </div>
   <div className="flex min-h-36 items-center justify-center bg-white p-6">
-    <img
-      src={withBasePath('sponsors/TA_Logo_resized.png', import.meta.env.BASE_URL)}
+    <Image
+      src={treasuryAmericas}
       alt="Treasury Americas, a division of Treasury Wine Estates"
-      width="300"
-      height="318"
-      className="max-h-24 w-auto max-w-full object-contain"
+      class="max-h-24 w-auto max-w-full object-contain"
       loading="lazy"
     />
   </div>
   <div className="flex min-h-36 items-center justify-center bg-white p-6">
-    <img
-      src={withBasePath('sponsors/Vinum55_Logo_resize.jpg', import.meta.env.BASE_URL)}
-      alt="Vinum 55"
-      width="800"
-      height="247"
-      className="max-h-16 w-auto max-w-full object-contain"
-      loading="lazy"
-    />
+    <Image src={vinum55} alt="Vinum 55" class="max-h-16 w-auto max-w-full object-contain" loading="lazy" />
   </div>
 </div>
 

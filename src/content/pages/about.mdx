@@ -8,7 +8,8 @@ seo:
     alt: The Badass Women In Wine
 ---
 
-import { withBasePath } from '../../config/site.js';
+import { Image } from 'astro:assets';
+import aboutFounders from '../../assets/images/about-founders-wide.jpg';
 import LeadershipProfiles from '../../components/LeadershipProfiles.astro';
 
 <nav className="not-prose mb-8 flex items-center gap-3 text-sm" aria-label="About page sections">
@@ -24,7 +25,7 @@ import LeadershipProfiles from '../../components/LeadershipProfiles.astro';
 </nav>
 
 <figure className="my-6">
-  <img src={withBasePath('about-founders-wide.jpg', import.meta.env.BASE_URL)} alt="Badass Women In Wine" />
+  <Image src={aboutFounders} alt="Badass Women In Wine founders" widths={[480, 768, 1200, 1600, 2000]} sizes="(min-width: 832px) 768px, calc(100vw - 32px)" />
   <figcaption className="text-main/60 mt-1 text-[10px] sm:text-xs">Photo by Janeth R Sanchez</figcaption>
 </figure>
 
