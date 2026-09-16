@@ -1,5 +1,5 @@
 import avatar from '../assets/images/BWIW-red-logo.jpg';
-import hero from '../assets/images/bwiw_hero_ladies.jpg';
+import hero from '../assets/images/BWW_home_page.jpg';
 import { withBasePath } from '../config/site.js';
 import type { SiteConfig } from '../types';
 
@@ -66,8 +66,8 @@ const siteConfig: SiteConfig = {
         title: 'Empowering Women in Wine',
         image: {
             src: hero,
-            alt: 'Ladies drinking wine.',
-            caption: ''
+            alt: 'Empowering Women in Wine',
+            caption: 'Photo by Janeth R Sanchez'
         }
     },
     home: {
