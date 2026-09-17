@@ -26,7 +26,10 @@ import LeadershipProfiles from '../../components/LeadershipProfiles.astro';
 
 <figure className="my-6">
   <Image src={aboutFounders} alt="Badass Women In Wine founders" widths={[480, 768, 1200, 1600, 2000]} sizes="(min-width: 832px) 768px, calc(100vw - 32px)" />
-  <figcaption className="text-main/60 mt-1 text-[10px] sm:text-xs">Photo by Janeth R Sanchez</figcaption>
+  <figcaption className="text-main/60 mt-1 flex items-baseline justify-between gap-4 text-[10px] leading-relaxed sm:text-xs">
+    <span>Badass Women In Wine HQ</span>
+    <span className="text-right">Photo by Janeth R Sanchez</span>
+  </figcaption>
 </figure>
 
 <h2 id="history" className="scroll-mt-8">

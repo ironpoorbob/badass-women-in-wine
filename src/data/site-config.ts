@@ -13,7 +13,7 @@ const siteConfig: SiteConfig = {
     subtitle: 'Women in wine empowering women in wine',
     description: 'A community of women in wine championing leadership, integrity, generosity, and professional growth.',
     image: {
-        src: withBasePath('../assets/images/BWIW-red-logo.jpg'),
+        src: avatar,
         alt: 'Badass Women In Wine'
     },
     headerNavLinks: [

@@ -40,7 +40,7 @@ if (image?.src) {
         };
     }
 }
-const canonicalURL = hasSite ? new URL(Astro.request.url, Astro.site) : Astro.url.pathname;
+const canonicalURL = hasSite ? new URL(Astro.url.pathname, Astro.site) : Astro.url.pathname;
 
 /**
  * Enforce some standard canonical URL formatting across the site.
