@@ -41,6 +41,46 @@ if (image?.src) {
     }
 }
 const canonicalURL = hasSite ? new URL(Astro.url.pathname, Astro.site) : Astro.url.pathname;
+const homePath = `${base}/` || '/';
+const isHomePage = Astro.url.pathname === homePath;
+const organizationId = hasSite ? new URL('/#organization', Astro.site).toString() : undefined;
+const structuredData =
+    hasSite && isHomePage
+        ? {
+              '@context': 'https://schema.org',
+              '@graph': [
+                  {
+                      '@type': 'Organization',
+                      '@id': organizationId,
+                      name: siteConfig.title,
+                      url: new URL('/', Astro.site).toString(),
+                      logo: {
+                          '@type': 'ImageObject',
+                          url: new URL(`${base}/favicon-512x512.png`, Astro.site).toString()
+                      },
+                      description: siteConfig.description,
+                      email: 'info@badasswomeninwine.org',
+                      taxID: '42-2542461',
+                      address: {
+                          '@type': 'PostalAddress',
+                          addressLocality: 'San Francisco',
+                          addressRegion: 'CA',
+                          addressCountry: 'US'
+                      },
+                      sameAs: siteConfig.socialLinks.map((link) => link.href)
+                  },
+                  {
+                      '@type': 'WebSite',
+                      '@id': new URL('/#website', Astro.site).toString(),
+                      url: new URL('/', Astro.site).toString(),
+                      name: siteConfig.title,
+                      publisher: {
+                          '@id': organizationId
+                      }
+                  }
+              ]
+          }
+        : undefined;
 
 /**
  * Enforce some standard canonical URL formatting across the site.
@@ -79,6 +119,8 @@ function formatCanonicalURL(url: string | URL) {
 <meta property="og:type" content={pageType} />
 <meta property="og:url" content={formatCanonicalURL(canonicalURL)} />
 <meta property="og:title" content={title} />
+<meta property="og:site_name" content={siteConfig.title} />
+<meta property="og:locale" content="en_US" />
 {description && <meta property="og:description" content={description} />}
 {resolvedImage?.src && <meta property="og:image" content={resolvedImage.src} />}
 {resolvedImage?.alt && <meta property="og:image:alt" content={resolvedImage.alt} />}
@@ -90,3 +132,6 @@ function formatCanonicalURL(url: string | URL) {
 {description && <meta name="twitter:description" content={description} />}
 {resolvedImage?.src && <meta name="twitter:image" content={resolvedImage.src} />}
 {resolvedImage?.alt && <meta name="twitter:image:alt" content={resolvedImage.alt} />}
+
+<!-- Structured Data -->
+{structuredData && <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
