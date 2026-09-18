@@ -1,9 +1,11 @@
 ---
 import Hero from '../components/Hero.astro';
+import HomeSections from '../components/HomeSections.astro';
 import siteConfig from '../data/site-config';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout description={siteConfig.description}>
     <Hero {...siteConfig.hero} />
+    {siteConfig.home && <HomeSections {...siteConfig.home} />}
 </BaseLayout>

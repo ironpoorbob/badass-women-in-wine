@@ -11,14 +11,10 @@ const { title, image, text, actions, instagramPosts, instagramTitle } = Astro.pr
 ---
 
 {
-    (title ||
-        image?.src ||
-        text ||
-        (actions && actions.length > 0) ||
-        (instagramPosts && instagramPosts.length > 0)) && (
+    (title || image?.src || text || (actions && actions.length > 0) || (instagramPosts && instagramPosts.length > 0)) && (
         <>
             <section class="mb-16 flex w-full flex-col gap-8 sm:mb-24">
-                {title && <h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">{title}</h1>}
+                {title && <h2 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">{title}</h2>}
                 {image?.src && (
                     <figure>
                         <CustomImage
@@ -29,7 +25,7 @@ const { title, image, text, actions, instagramPosts, instagramTitle } = Astro.pr
                             fetchpriority="high"
                             loading="eager"
                         />
-                        {image.caption && <figcaption class="mt-1.5 text-[10px] text-main/60 sm:text-xs">{image.caption}</figcaption>}
+                        {image.caption && <figcaption class="text-main/60 mt-1.5 text-[10px] sm:text-xs">{image.caption}</figcaption>}
                     </figure>
                 )}
                 {text && <div class="prose sm:prose-lg max-w-none" set:html={marked.parse(text)} />}

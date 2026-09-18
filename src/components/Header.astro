@@ -9,9 +9,9 @@ const homeHref = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 <header class="mx-auto mb-12 flex w-full max-w-3xl items-center gap-4 sm:mb-16">
     {
         siteConfig.avatar?.src && (
-            <a href={homeHref}>
+            <a href={homeHref} class="flex aspect-square w-16 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white p-0.5 sm:w-20 sm:p-1">
                 <CustomImage
-                    class="aspect-square w-16 rounded-full object-cover sm:w-20"
+                    class="h-full w-full object-contain"
                     {...siteConfig.avatar}
                     loading="eager"
                     fetchpriority="high"
@@ -26,11 +26,11 @@ const homeHref = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
     <div class="grow">
         {
             siteConfig.avatar?.src ? (
-                <p class={titleClass}>{siteConfig.title}</p>
+                <h1 class={titleClass}>{siteConfig.title}</h1>
             ) : (
-                <a class={titleClass} href={homeHref}>
-                    {siteConfig.title}
-                </a>
+                <h1 class={titleClass}>
+                    <a href={homeHref}>{siteConfig.title}</a>
+                </h1>
             )
         }
         {siteConfig.subtitle && <p class="text-sm leading-tight">{siteConfig.subtitle}</p>}
