@@ -8,14 +8,66 @@ seo:
     alt: The Badass Women In Wine
 ---
 
-import { withBasePath } from '../../config/site.js';
+import { Image } from 'astro:assets';
+import aboutFounders from '../../assets/images/about-founders-wide.jpg';
+import LeadershipProfiles from '../../components/LeadershipProfiles.astro';
+
+<nav className="not-prose mb-8 flex items-center gap-3 text-sm" aria-label="About page sections">
+  <a className="hover:underline hover:underline-offset-4" href="#history">
+    History
+  </a>
+  <span className="text-main/40" aria-hidden="true">
+    |
+  </span>
+  <a className="hover:underline hover:underline-offset-4" href="#people">
+    People
+  </a>
+</nav>
 
 <figure className="my-6">
-  <img src={withBasePath('about.jpg', import.meta.env.BASE_URL)} alt="Badass Women In Wine" />
-  <figcaption className="mt-1 text-[10px] text-main/60 sm:text-xs">Photo by Janeth R Sanchez</figcaption>
+  <Image src={aboutFounders} alt="Badass Women In Wine founders" widths={[480, 768, 1200, 1600, 2000]} sizes="(min-width: 832px) 768px, calc(100vw - 32px)" />
+  <figcaption className="text-main/60 mt-1 flex items-baseline justify-between gap-4 text-[10px] leading-relaxed sm:text-xs">
+    <span>Badass Women In Wine HQ</span>
+    <span className="text-right">Photo by Janeth R Sanchez</span>
+  </figcaption>
 </figure>
 
-Badass Women in Wine is a community of women in wine empowering women in wine. Rooted in leadership, integrity, generosity, and professionalism, we create meaningful opportunities to connect, support one another, and grow together. Through shared experiences, events, and conversation, we elevate each other and celebrate the women helping shape the future of the wine industry.
+<h2 id="history" className="scroll-mt-8">
+  History
+</h2>
 
+It all started with a handful of gals who worked at wineries getting together for lunch.
 
-Reach out and [get in touch](../contact) with us. 
+Sara Gorr turned that lunch into an annual tradition. Each year, we added more remarkable women we knew in the industry. With every new face, the table grew, and the conversation evolved to include sharing industry insights, the unique challenges we face, and peer mentorship.
+
+These women were not just invited because they were women. They were not just invited because they were fun. They were invited because they were cool, they supported other women, and they led by example with integrity, generosity, and passion. We were building a community, selective - yet inclusive.
+
+But there was another idea that had been percolating for Sara for years.
+
+When she looked back at her own career, she kept coming back to one question: **What had been missing?**
+
+The answer was access to professional growth and the knowledge to back it up.
+
+The resources were out there, but access to them wasn’t always equal. As she saw it, women were fighting for a seat at “the table.” Even with all our contributions and the strides we have made, that table was built by men and, in many ways, is still guarded by them.
+
+Sara started asking a different question:
+
+> What could we do if we built our own table?
+
+### 2016 — A table for women, by women
+
+Sara saw an opportunity. She asked three remarkable women from these lunches to join her as co-founders.
+
+**And Badass Women in Wine was born.**
+
+### 2024 — The Heilmann Trophy Grant
+
+Badass Women in Wine expanded our mission and created the Heilmann Trophy Grant for Badass Women in Wine, supporting continuing education and professional growth for women in the wine industry.
+
+What started as a lunch among a handful of gals has grown into something much bigger: a community committed to connection, leadership, and creating greater access to opportunity.
+
+When women have the resources, relationships, confidence, and room to grow, they don’t just advance their own careers - they bring new voices, ideas, and perspectives to the table. They challenge the status quo. They lead differently. And they have the power to make a bigger impact on the wine industry and help shape where it goes next.
+
+Badass Women in Wine is all about helping women find their most authentic voice, step into their power, and leave their mark on this industry we love.
+
+<LeadershipProfiles />

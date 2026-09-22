@@ -18,6 +18,25 @@ export type Hero = {
     instagramTitle?: string;
 };
 
+export type CallToAction = {
+    title: string;
+    text: string;
+    buttonLabel: string;
+    href: string;
+    target?: '_blank';
+};
+
+export type HomePage = {
+    mission: {
+        title: string;
+        text: string;
+        quote?: string;
+    };
+    callsToAction: CallToAction[];
+    socialLinks: Link[];
+    organizationDetails?: string[];
+};
+
 export type SubscribeForm = {
     action: string;
     emailFieldName?: string;
@@ -43,6 +62,7 @@ export type SiteConfig = {
     footerNavLinks?: Link[];
     socialLinks?: Link[];
     hero?: Hero;
+    home?: HomePage;
     subscribe?: Subscribe;
     postsPerPage?: number;
 };

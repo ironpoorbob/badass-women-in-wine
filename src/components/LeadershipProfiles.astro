@@ -1,0 +1,105 @@
+---
+import anne from '../assets/images/profiles/profile-anne.png';
+import christina from '../assets/images/profiles/profile-christina.png';
+import elise from '../assets/images/profiles/profile-elise.png';
+import kendra from '../assets/images/profiles/profile-kendra.png';
+import kimberley from '../assets/images/profiles/profile-kimberley.png';
+import sara from '../assets/images/profiles/profile-sara.png';
+import teresa from '../assets/images/profiles/profile-teresa.png';
+import ProfileCard, { type Profile } from './ProfileCard.astro';
+
+const leadership: Profile[] = [
+    {
+        name: 'Sara Gorr',
+        role: 'Founder / President',
+        image: sara,
+        bio: [
+            'For over 25 years, Sara has worked in sales and marketing for family wineries in Napa Valley. What began as a job became one of the greatest loves of her life.',
+            'Sara found that her background in the film industry, focusing on stories that connect us, transitioned seamlessly to the wine industry. Whether through film, art, music, or wine, she has always been drawn to stories that make people feel something real: recognition, curiosity, joy, and connection—bringing forward the people, histories, and personalities behind each bottle in a way that feels honest, tangible, and deeply human.',
+            'Sara created Badass Women in Wine from a simple desire: to build more meaningful connections among women working in every corner of the wine industry and create a space to nurture leadership and support all women in becoming the best expressions of themselves, personally as well as professionally.',
+            'Sara is a Certified Co-Active Coach and, most recently, co-founded 3rd Person Creative, a branding and design agency dedicated to helping businesses connect more authentically with customers. In 2026, she launched 3rd Person WINE, where she provides wholesale sales management and consulting to family wineries.'
+        ]
+    },
+    {
+        name: 'Kendra Gillette',
+        role: 'Co-Founder / Vice President',
+        image: kendra,
+        bio: [
+            'Kendra has spent twenty-plus years saying yes to every corner of the wine industry—boutique distribution in Texas, national and international sales for premium Napa Valley wineries—and she’s still knee-deep in it, selling barrels and building Bird Snapper, her own non-alcoholic canned cocktail brand. What makes Kendra special isn’t just her résumé; it’s the way she shows up for people. She’s built incredible relationships across the industry, loves connecting people, and genuinely wants to see others succeed.',
+            'Co-founding Badass Women in Wine felt like the obvious next step. It’s her way of paying forward the support she received, creating space for honest conversations, and reminding women that they belong here. She believes the best part of wine has always been the people—and there’s always room for more seats at the table.'
+        ]
+    },
+    {
+        name: 'Christina Donely',
+        role: 'Co-Founder / Treasurer',
+        image: christina,
+        bio: [
+            'Christina has spent more than two decades with Ridge Vineyards, growing from her first role in the Tasting Room to running its domestic wholesale business. Along the way, she’s sold wine across the country and Canada, built lasting partnerships, and discovered that the best part of the business is the people.',
+            'Her passion is empowering individuals and communities to achieve what they want in life and in the world. She’s just as happy talking winemaking philosophy and distribution strategy as she is cooking a meal, writing poetry, making art, or finding an excuse to laugh. She believes great leadership starts with curiosity, respect, and leaving people better than you found them.',
+            'Co-founding Badass Women in Wine is her way of creating the kind of community she always hoped existed—one where women champion one another, share what they’ve learned, and make sure the next generation knows there’s a place for them in this industry.'
+        ]
+    },
+    {
+        name: 'Anne Moses',
+        role: 'Co-Founder / Secretary',
+        image: anne,
+        bio: [
+            'Anne has spent a lifetime in wine, but she’s never stayed in just one lane. She began her career as an enologist, working in production at Far Niente, Spring Mountain Vineyard, and Cain Vineyard before making the leap into sales and marketing. In 1988, she and her husband, James Hall, co-founded Patz & Hall, where she wore just about every hat imaginable—from marketing and sales to leadership and business strategy.',
+            'After Patz & Hall joined Ste. Michelle Wine Estates, Anne helped grow some of the industry’s most respected luxury brands before retiring in 2021. Retirement, however, didn’t last long. In 2024, Anne, James, and a group of investors brought Patz & Hall back home, returning to what they love most: crafting world-class Chardonnay and Pinot Noir from California’s iconic vineyards. When she’s not in wine, you’ll likely find her studying classical guitar or planning her next adventure abroad.'
+        ]
+    }
+];
+
+const board: Profile[] = [
+    {
+        name: 'Kimberly Charles',
+        role: 'Board Member',
+        term: '2026–2029',
+        image: kimberley,
+        bio: [
+            'For four decades, Kimberly Noëlle Charles, DipWSET, has helped shape not just how wine is understood in the marketplace, but the importance of how we gather around it. Founder of Charles Communications Associates, Kimberly has built a career telling stories that connect wine to something larger: the earth it comes from, the hands that tend and harvest it, and the people we love enough to share a bottle with.',
+            'At a time when wine has faced increasing cultural headwinds, Kimberly has continued to champion its humanity—creating campaigns centered on gathering, community, and connection. Alongside Karen MacNeil and Gino Colangelo, she co-founded Come Together, A Community for Wine, and has used her voice, experience, and influence to lift the industry.',
+            'Kimberly holds the WSET Diploma, a degree in History & Government from Georgetown University, and serves on the board of the Glancy Wine Education Foundation. To us, she brings something harder to capture on a résumé or in a social media post: generosity, imagination, wisdom, and a little bit of magic.'
+        ]
+    },
+    {
+        name: 'Teresa D’Aurizio',
+        role: 'Board Member',
+        term: '2026–2029',
+        image: teresa,
+        bio: [
+            'Teresa D’Aurizio began her wine career in Aspen, Colorado, in the early ’90s before heading west to Napa Valley, where she joined the deLeuze family at ZD Wines in 1998. Today, as Vice President of Sales & Marketing, she leads a talented team dedicated to sharing ZD’s wines and the family’s 58-year legacy of producing world-class wines.',
+            'Her motto, “Have ZD Wines, Will Travel,” says a lot about Teresa. She loves bringing people together, building meaningful relationships, and believes the best part of wine is the connection and shared experiences that come with it.',
+            'When she’s not on the road, Teresa can be found exploring the Pacific Coast, spending time with her husband Dan, painting watercolor cards, or enjoying life with their four very loved cats.',
+            'She is especially passionate about supporting women in wine—opening doors, mentoring others, and helping the next generation recognize their strengths and thrive.'
+        ]
+    },
+    {
+        name: 'Elise Faur',
+        role: 'Board Member',
+        term: '2026–2029',
+        image: elise,
+        bio: [
+            'Some people call Elise a serial careerist. She prefers to think of herself as endlessly curious. Her career has taken her from nearly 20 years in hospitality to another 20 years in the wine industry, where she worked in sales and distribution, before making one more unexpected pivot five years ago to become a Certified Financial Planner®. Looking back, every chapter has been about the same thing: building relationships, solving problems, and helping people make confident decisions.',
+            'Off the clock, Elise is an avid world traveler, endless learner, and dedicated enthusiast of good food, drinks, and home cooking. Spending time in Mexico is her ultimate reset, complete with sunny skies, amazing flavors, and a slower pace.',
+            'Though she has stepped away from the wine trade, Elise continues to keep her finger on the industry’s pulse as a board member of Badass Women in Wine. Today, her passion sits squarely at the intersection of her two careers: empowering women from all walks of life through financial literacy. When women master their money, they gain the confidence to take bold, calculated risks that elevate their careers—and there’s nothing more badass than that.'
+        ]
+    }
+];
+---
+
+<div id="people" class="not-prose mt-16 scroll-mt-8 sm:mt-24">
+    <section aria-labelledby="leadership-title">
+        <h2 id="leadership-title" class="mb-8 font-serif text-3xl font-medium sm:text-4xl">Founders &amp; Officers</h2>
+        <div class="space-y-12 sm:space-y-16">
+            {leadership.map((profile) => <ProfileCard profile={profile} />)}
+        </div>
+    </section>
+
+    <section class="mt-16 sm:mt-24" aria-labelledby="board-title">
+        <h2 id="board-title" class="mb-8 font-serif text-3xl font-medium sm:text-4xl">Board Members</h2>
+        <div class="space-y-12 sm:space-y-16">
+            {board.map((profile) => <ProfileCard profile={profile} />)}
+        </div>
+    </section>
+</div>

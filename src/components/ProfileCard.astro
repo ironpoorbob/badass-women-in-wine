@@ -1,0 +1,39 @@
+---
+import { Image, type ImageMetadata } from 'astro:assets';
+
+export type Profile = {
+    name: string;
+    role: string;
+    term?: string;
+    image: ImageMetadata;
+    bio?: string[];
+};
+
+type Props = { profile: Profile };
+
+const { profile } = Astro.props;
+---
+
+<article class="border-main/25 grid gap-6 border-t pt-8 sm:grid-cols-[minmax(0,220px)_1fr] sm:gap-8">
+    <Image
+        src={profile.image}
+        alt={`Portrait of ${profile.name}`}
+        class="aspect-[268/277] w-full object-cover"
+        widths={[268, 536]}
+        sizes="(min-width: 640px) 220px, calc(100vw - 32px)"
+    />
+    <div>
+        <h3 class="font-serif text-2xl leading-tight font-medium sm:text-3xl">{profile.name}</h3>
+        <p class="mt-1 text-sm leading-snug">{profile.role}</p>
+        {profile.term && <p class="text-main/60 mt-1 text-xs">{profile.term}</p>}
+        {
+            profile.bio && (
+                <div class="mt-6 space-y-4 text-sm leading-relaxed sm:text-base">
+                    {profile.bio.map((paragraph) => (
+                        <p>{paragraph}</p>
+                    ))}
+                </div>
+            )
+        }
+    </div>
+</article>

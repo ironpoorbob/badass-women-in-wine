@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Use the canonical www hostname. DreamHost's SSL setting handles HTTPS.
+# Match only the bare production domain so preview domains remain accessible.
+RewriteCond %{HTTP_HOST} ^badasswomeninwine\.org$ [NC]
+RewriteRule ^ https://www.badasswomeninwine.org%{REQUEST_URI} [R=301,L,NE]
